@@ -1,0 +1,8 @@
+<label for="name">
+	<f:translate key="tx_mtbraceresult_domain_model_racer.name" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="name" /><br />
+<label for="birthday">
+	<f:translate key="tx_mtbraceresult_domain_model_racer.birthday" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="birthday"  value="{racer.birthday->f:format.date()}" /><br />

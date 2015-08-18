@@ -1,0 +1,55 @@
+
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Options</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.show_class>
+                        <TCEforms>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">U13</numIndex>
+                                        <numIndex index="1">U13</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">U15</numIndex>
+                                        <numIndex index="1">U15</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">U17</numIndex>
+                                        <numIndex index="1">U17</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">U19</numIndex>
+                                        <numIndex index="1">U19</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">U23</numIndex>
+                                        <numIndex index="1">U23</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">Elite</numIndex>
+                                        <numIndex index="1">Elite</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">alle</numIndex>
+                                        <numIndex index="1">alle</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                            <label>
+                                LLL:EXT:mtbraceresult/Resources/Private/Language/locallang.xml:tx_mtbraceresult_domain_model_race.only_show_class
+                            </label>
+                        </TCEforms>                        
+                    </settings.show_class>                    
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

@@ -1,0 +1,21 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+    <div class="racer show">
+<h1>{racer.name}</h1>
+<h2>Klasse: {ageClass}</h2>
+<table class="racer show" >
+    <tr>
+        <td>
+        <f:if condition="{racer.portrait}">
+            <f:image src="{uploadfolder}/{racer.portrait}" alt="{racer.name}" width="200" />
+        </f:if>
+        </td>
+        <td>
+            <f:format.raw>{racer.description}</f:format.raw>
+        </td>
+    </tr>    
+</table>
+</div>
+
+</f:section>

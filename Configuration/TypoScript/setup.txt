@@ -1,0 +1,50 @@
+plugin.tx_mtbraceresult {
+	view {
+		templateRootPath = {$plugin.tx_mtbraceresult.view.templateRootPath}
+		partialRootPath = {$plugin.tx_mtbraceresult.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_mtbraceresult.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_mtbraceresult.persistence.storagePid}
+	}
+}
+
+plugin.tx_mtbraceresult._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+)
+
+plugin.tx_mtbraceresult.racer.list.image = IMAGE
+plugin.tx_mtbraceresult.racer.list.image{
+    file {
+        import.current = 1
+        treatIdAsReference = 1
+    }
+    altText = Logo
+    layoutKey = picture
+    layout{
+        picture {
+            element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
+            source = <source src="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
+        }
+    }
+    sourceCollection {
+        large{
+            width = 1140
+            maxW = 1140
+            mediaQuery = (min-device-width: 1170px)
+        }
+        small{
+            width = 720
+            maxW = 720
+            mediaQuery = (min-device-width: 750px)
+        }
+        medium{
+            width = 940
+            maxW = 940
+            mediaQuery = (min-device-width: 940px)
+        }
+    }
+}

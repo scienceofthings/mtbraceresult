@@ -1,0 +1,32 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<ul class="racers list" >
+	<f:for each="{racers}" as="racer">
+		<li>            	                                
+                <f:if condition="{racer.portrait}">
+                    <f:then>
+                        <a href="{uploadfolder}/{racer.portrait}" 
+			class="lightbox" 
+			rel="lightbox['racerslist']" 
+			title="{racer.name}" >
+                            <f:image src="{uploadfolder}/{racer.portrait}" alt="{racer.name}" width="120c" height="160"/>
+                        </a>
+                    </f:then>
+                    <f:else>
+                        <f:image src="{defaultPortrait}" alt="{racer.name}" width="120c" height="160"/>
+                    </f:else>
+                </f:if>                                
+                <p>
+                    {racer.name} <br/>
+                    {racer.event}
+                </p> 
+                
+		</li>
+	</f:for>
+    <div class="clear"></div>
+</ul>
+
+
+</f:section>

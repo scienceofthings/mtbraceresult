@@ -1,0 +1,76 @@
+{namespace m = Tx_Mtbraceresult_ViewHelpers}       
+<f:layout name="Default" />
+
+
+<f:section name="main">
+
+
+    
+<div class="remove">
+  <div class="dataTables_dateInput">
+    von Datum:<br/>
+    <input size="7" class="datepicker" type="text" name="min" id="min">
+  </div>
+  <div class="dataTables_dateInput">
+    bis Datum:<br/>
+    <input size="7" class="datepicker" type="text" name="max" id="max">  
+  </div>  
+  <div class="dataTables_selectRacer">
+    <f:translate key="tx_mtbraceresult_domain_model_racer.name" />:
+    <br/>
+    <select>
+      <option selected value=""><f:translate key="tx_mtbraceresult_domain_model_racer.show_all" /></option>
+      <f:for each="{m:listracers(raceresults:'{raceResults}')}" as="racer" >
+          <option>{racer}</option>
+        </f:for> 
+    </select>
+  </div>  
+  <div class="dataTables_selectRace">
+    <f:translate key="tx_mtbraceresult_domain_model_race.name" />:
+    <br/>
+    <select>
+        <option selected value=""><f:translate key="tx_mtbraceresult_domain_model_race.show_all" /></option>
+        <f:for each="{m:listraces(raceresults:'{raceResults}')}" as="race" >
+          <option>{race}</option>
+        </f:for>        
+    </select>
+  </div>  
+</div>
+       
+        
+    
+    
+          
+    
+<table>
+  <thead>
+    <tr>
+      <th><f:translate key="tx_mtbraceresult_domain_model_racer.name" /></th>
+<th><f:translate key="tx_mtbraceresult_domain_model_racer.ageclass" /> </th>
+<th><f:translate key="tx_mtbraceresult_domain_model_race.name" /> </th>
+<th><f:translate key="tx_mtbraceresult_domain_model_race.date" /> </th>
+<th><f:translate key="tx_mtbraceresult_domain_model_raceresult.result" /> </th>		    
+</tr>
+</thead>
+<tbody>
+<f:for each="{raceResults}" as="raceResult">
+  <tr>
+    <td>
+        {raceResult.racer.name}
+    </td>
+    <td>          
+       <m:calculateageclass raceResult="{raceResult}" /> 
+    </td>
+    <td>{raceResult.race.name.name} {raceResult.race.location}</td>
+    <td><f:format.date format="d.m.Y">{raceResult.race.date}</f:format.date></td>
+    <td>{raceResult.result}.Platz</td>			
+  </tr>
+</f:for>
+</tbody>
+</table>
+
+    
+
+        
+
+</f:section>

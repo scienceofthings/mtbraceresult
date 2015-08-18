@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the MTB Race Result extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_mtbraceresult_domain_model_raceseries">a race series or a championchip</label>
+			<label index="tx_mtbraceresult_domain_model_raceseries.name">the name of the race</label>
+			<label index="tx_mtbraceresult_domain_model_race">A Race</label>
+			<label index="tx_mtbraceresult_domain_model_race.location">location</label>
+			<label index="tx_mtbraceresult_domain_model_race.date">Datum</label>
+            <label index="tx_mtbraceresult_domain_model_race.date_begin">von Datum</label>
+            <label index="tx_mtbraceresult_domain_model_race.only_show_class">zeige nur</label>
+            <label index="tx_mtbraceresult_domain_model_race.date_end">bis Datum</label>
+			<label index="tx_mtbraceresult_domain_model_race.name">Rennen</label>
+			<label index="tx_mtbraceresult_domain_model_raceresult">RaceResult</label>
+			<label index="tx_mtbraceresult_domain_model_raceresult.result">Ergebnis</label>
+			<label index="tx_mtbraceresult_domain_model_raceresult.race">race</label>
+			<label index="tx_mtbraceresult_domain_model_raceresult.racer">Fahrer</label>
+			<label index="tx_mtbraceresult_domain_model_racer.name">Fahrer</label>      			
+			<label index="tx_mtbraceresult_domain_model_racer.birthday">birthday</label>
+      <label index="tx_mtbraceresult_domain_model_racer.ageclass">Klasse</label>
+      <label index="tx_mtbraceresult_domain_model_racer.show_all">alle zeigen</label>
+      <label index="tx_mtbraceresult_domain_model_race.show_all">alle zeigen</label>
+      
+		</languageKey>
+	</data>
+</T3locallang>

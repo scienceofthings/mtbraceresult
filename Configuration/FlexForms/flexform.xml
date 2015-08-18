@@ -1,0 +1,43 @@
+
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Options</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.begin_date>
+                        <TCEforms>
+                            <config>
+                                <type>input</type>
+                                <size>8</size>                                
+                                <max>8</max>                                
+                                <eval>date</eval>                                
+                                <checkbox>1</checkbox>
+                            </config>
+                            <label>
+                                LLL:EXT:mtbraceresult/Resources/Private/Language/locallang.xml:tx_mtbraceresult_domain_model_race.date_begin
+                            </label>
+                        </TCEforms>                        
+                    </settings.begin_date>
+                    <settings.end_date>
+                        <TCEforms>
+                            <config>
+                                <type>input</type>
+                                <size>8</size>                                
+                                <max>8</max>                                
+                                <eval>date</eval>                                
+                                <checkbox>1</checkbox>
+                            </config>
+                            <label>
+                                LLL:EXT:mtbraceresult/Resources/Private/Language/locallang.xml:tx_mtbraceresult_domain_model_race.date_end
+                            </label>
+                        </TCEforms>                        
+                    </settings.end_date>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>
