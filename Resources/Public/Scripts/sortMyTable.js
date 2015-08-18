@@ -68,6 +68,7 @@ $(document).ready(function() {
  
     // table layout     
     raceResultTable.dataTable({
+        responsive: true,
         "aoColumns": [
         {
             sWidth: '20%'
