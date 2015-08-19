@@ -129,7 +129,7 @@ CREATE TABLE tx_mtbraceresult_domain_model_racer (
 
 	name varchar(255) DEFAULT '' NOT NULL,
 	birthday int(11) DEFAULT '0' NOT NULL,
-	portrait text NOT NULL,
+	portrait int(11) unsigned DEFAULT '0' NOT NULL,
 	description text NOT NULL,
 	event varchar(255) DEFAULT '' NOT NULL,
 

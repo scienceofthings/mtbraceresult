@@ -9,7 +9,7 @@ $TCA['tx_mtbraceresult_domain_model_raceresult'] = array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, result, race, racer',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, result, race, racer,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, result, race, racer,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -17,21 +17,21 @@ $TCA['tx_mtbraceresult_domain_model_raceresult'] = array(
 	'columns' => array(
 		'sys_language_uid' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
+			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'sys_language',
 				'foreign_table_where' => 'ORDER BY sys_language.title',
 				'items' => array(
-					array('LLL:EXT:lang/locallang_general.xml:LGL.allLanguages', -1),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.default_value', 0)
+					array('LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages', -1),
+					array('LLL:EXT:lang/locallang_general.xlf:LGL.default_value', 0)
 				),
 			),
 		),
 		'l10n_parent' => array(
 			'displayCond' => 'FIELD:sys_language_uid:>:0',
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.l18n_parent',
+			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
 			'config' => array(
 				'type' => 'select',
 				'items' => array(
@@ -47,7 +47,7 @@ $TCA['tx_mtbraceresult_domain_model_raceresult'] = array(
 			),
 		),
 		't3ver_label' => array(
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.versionLabel',
+			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.versionLabel',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -56,7 +56,7 @@ $TCA['tx_mtbraceresult_domain_model_raceresult'] = array(
 		),
 		'hidden' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
 			'config' => array(
 				'type' => 'check',
 			),
@@ -64,7 +64,7 @@ $TCA['tx_mtbraceresult_domain_model_raceresult'] = array(
 		'starttime' => array(
 			'exclude' => 1,
 			'l10n_mode' => 'mergeIfNotBlank',
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
+			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
 			'config' => array(
 				'type' => 'input',
 				'size' => 13,
@@ -80,7 +80,7 @@ $TCA['tx_mtbraceresult_domain_model_raceresult'] = array(
 		'endtime' => array(
 			'exclude' => 1,
 			'l10n_mode' => 'mergeIfNotBlank',
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
+			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
 			'config' => array(
 				'type' => 'input',
 				'size' => 13,
@@ -95,7 +95,7 @@ $TCA['tx_mtbraceresult_domain_model_raceresult'] = array(
 		),
 		'result' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xml:tx_mtbraceresult_domain_model_raceresult.result',
+			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_raceresult.result',
 			'config' => array(
 				'type' => 'select',
 				'items' => array(
@@ -189,7 +189,7 @@ $TCA['tx_mtbraceresult_domain_model_raceresult'] = array(
 		),
 		'race' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xml:tx_mtbraceresult_domain_model_raceresult.race',
+			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_raceresult.race',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_mtbraceresult_domain_model_race',        
@@ -200,7 +200,7 @@ $TCA['tx_mtbraceresult_domain_model_raceresult'] = array(
 		),
 		'racer' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xml:tx_mtbraceresult_domain_model_raceresult.racer',
+			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_raceresult.racer',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_mtbraceresult_domain_model_racer',        

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-08-19T21:37:39Z" product-name="mtbraceresult">
+		<header/>
+		<body>
+			<trans-unit id="result.description">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="race">
+				<source>Rennen</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

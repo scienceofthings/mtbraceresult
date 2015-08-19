@@ -22,11 +22,11 @@ Tx_Extbase_Utility_Extension::registerPlugin(
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'MTB Race Result');
 
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_mtbraceresult_domain_model_raceseries', 'EXT:mtbraceresult/Resources/Private/Language/locallang_csh_tx_mtbraceresult_domain_model_raceseries.xml');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_mtbraceresult_domain_model_raceseries', 'EXT:mtbraceresult/Resources/Private/Language/locallang_csh_tx_mtbraceresult_domain_model_raceseries.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_mtbraceresult_domain_model_raceseries');
 $TCA['tx_mtbraceresult_domain_model_raceseries'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xml:tx_mtbraceresult_domain_model_raceseries',
+		'title'	=> 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_raceseries',
 		'label' => 'name',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -49,11 +49,11 @@ $TCA['tx_mtbraceresult_domain_model_raceseries'] = array(
 	),
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_mtbraceresult_domain_model_race', 'EXT:mtbraceresult/Resources/Private/Language/locallang_csh_tx_mtbraceresult_domain_model_race.xml');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_mtbraceresult_domain_model_race', 'EXT:mtbraceresult/Resources/Private/Language/locallang_csh_tx_mtbraceresult_domain_model_race.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_mtbraceresult_domain_model_race');
 $TCA['tx_mtbraceresult_domain_model_race'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xml:tx_mtbraceresult_domain_model_race',
+		'title'	=> 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_race',
 		'label' => 'location',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -77,11 +77,11 @@ $TCA['tx_mtbraceresult_domain_model_race'] = array(
 	),
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_mtbraceresult_domain_model_raceresult', 'EXT:mtbraceresult/Resources/Private/Language/locallang_csh_tx_mtbraceresult_domain_model_raceresult.xml');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_mtbraceresult_domain_model_raceresult', 'EXT:mtbraceresult/Resources/Private/Language/locallang_csh_tx_mtbraceresult_domain_model_raceresult.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_mtbraceresult_domain_model_raceresult');
 $TCA['tx_mtbraceresult_domain_model_raceresult'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xml:tx_mtbraceresult_domain_model_raceresult',
+		'title'	=> 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_raceresult',
 		'label' => 'result',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -104,11 +104,11 @@ $TCA['tx_mtbraceresult_domain_model_raceresult'] = array(
 	),
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_mtbraceresult_domain_model_racer', 'EXT:mtbraceresult/Resources/Private/Language/locallang_csh_tx_mtbraceresult_domain_model_racer.xml');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_mtbraceresult_domain_model_racer', 'EXT:mtbraceresult/Resources/Private/Language/locallang_csh_tx_mtbraceresult_domain_model_racer.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_mtbraceresult_domain_model_racer');
 $TCA['tx_mtbraceresult_domain_model_racer'] = array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xml:tx_mtbraceresult_domain_model_racer',
+		'title'	=> 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_racer',
 		'label' => 'name',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',

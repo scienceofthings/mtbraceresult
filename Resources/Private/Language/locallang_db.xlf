@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-08-19T21:37:39Z" product-name="mtbraceresult">
+		<header/>
+		<body>
+			<trans-unit id="tx_mtbraceresult_domain_model_racer">
+				<source>Racer</source>
+			</trans-unit>
+			<trans-unit id="tx_mtbraceresult_domain_model_racer.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_mtbraceresult_domain_model_racer.birthday">
+				<source>Geburtstag</source>
+			</trans-unit>
+			<trans-unit id="tx_mtbraceresult_domain_model_racer.portrait">
+   				<source>Bild</source>
+   			</trans-unit>
+            <trans-unit id="tx_mtbraceresult_domain_model_racer.description">
+             	<source>Beschreibung</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_racer.event">
+             	<source>Diziplin</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_race.showall">
+                <source>alle zeigen</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_racer.showall">
+             	<source>alle zeigen</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult.showall">
+             	<source>Saison</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_raceseries">
+             	<source>Rennserie</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_raceseries.name">
+             	<source>Name</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_race">
+             	<source>Rennen</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_race.location">
+             	<source>Ort</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_race.date">
+             	<source>Datum</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_race.name">
+             	<source>Name</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_raceresult">
+             	<source>Rennergebnis</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_raceresult.result">
+             	<source>Ergebnis</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_raceresult.race">
+             	<source>Rennen</source>
+             </trans-unit>
+             <trans-unit id="tx_mtbraceresult_domain_model_raceresult.racer">
+             	<source>Fahrer</source>
+             </trans-unit>
+		</body>
+	</file>
+</xliff>
