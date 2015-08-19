@@ -1,5 +1,5 @@
 <?php
-
+namespace Hyneck\Mtbraceresult\Domain\Model;
 /***************************************************************
  *  Copyright notice
  *
@@ -32,7 +32,7 @@
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  *
  */
-class Tx_Mtbraceresult_Domain_Model_RaceSeries extends Tx_Extbase_DomainObject_AbstractEntity {
+class RaceSeries extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * the name of the race

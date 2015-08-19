@@ -1,5 +1,5 @@
 <?php
-
+namespace Hyneck\Mtbraceresult\Domain\Repository;
 /***************************************************************
  *  Copyright notice
  *
@@ -32,7 +32,7 @@
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  *
  */
-class Tx_Mtbraceresult_Domain_Repository_RacerRepository extends Tx_Extbase_Persistence_Repository {
+class RacerRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
     
     /**
      * Find Racers only with this date of birth

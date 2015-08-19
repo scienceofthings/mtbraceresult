@@ -1,5 +1,5 @@
 <?php
-
+namespace Hyneck\Mtbraceresult\Domain\Model;
 /***************************************************************
  *  Copyright notice
  *
@@ -32,7 +32,7 @@
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  *
  */
-class Tx_Mtbraceresult_Domain_Model_Racer extends Tx_Extbase_DomainObject_AbstractEntity {
+class Racer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * name of the racere
@@ -140,7 +140,7 @@ class Tx_Mtbraceresult_Domain_Model_Racer extends Tx_Extbase_DomainObject_Abstra
     /**
 	 * Returns the portrait
 	 *
-	 * @return \string $portrait
+	 * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $portrait
 	 */
 	public function getPortrait() {        		
         return $this->portrait;
@@ -150,7 +150,7 @@ class Tx_Mtbraceresult_Domain_Model_Racer extends Tx_Extbase_DomainObject_Abstra
 	/**
 	 * Sets the image
 	 *
-	 * @param \string $portrait
+	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $portrait
 	 * @return void
 	 */
 	public function setPortrait($portrait) {

@@ -1,5 +1,5 @@
 <?php
-
+namespace Hyneck\Raceresult\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -32,7 +32,7 @@
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  *
  */
-class Tx_Mtbraceresult_Controller_RaceController extends Tx_Extbase_MVC_Controller_ActionController {
+class RaceController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * action delete
@@ -40,7 +40,7 @@ class Tx_Mtbraceresult_Controller_RaceController extends Tx_Extbase_MVC_Controll
 	 * @param $race
 	 * @return void
 	 */
-	public function deleteAction(Tx_Mtbraceresult_Domain_Model_Race $race) {
+	public function deleteAction(\Hyneck\Mtbraceresult\Domain\Model\Race $race) {
 		$this->raceRepository->remove($race);
 		$this->flashMessageContainer->add('Your Race was removed.');
 		$this->redirect('list');
@@ -52,7 +52,7 @@ class Tx_Mtbraceresult_Controller_RaceController extends Tx_Extbase_MVC_Controll
 	 * @param $race
 	 * @return void
 	 */
-	public function editAction(Tx_Mtbraceresult_Domain_Model_Race $race) {
+	public function editAction(\Hyneck\Mtbraceresult\Domain\Model\Race $race) {
 		$this->view->assign('race', $race);
 	}
 
@@ -62,7 +62,7 @@ class Tx_Mtbraceresult_Controller_RaceController extends Tx_Extbase_MVC_Controll
 	 * @param $race
 	 * @return void
 	 */
-	public function updateAction(Tx_Mtbraceresult_Domain_Model_Race $race) {
+	public function updateAction(\Hyneck\Mtbraceresult\Domain\Model\Race $race) {
 		$this->raceRepository->update($race);
 		$this->flashMessageContainer->add('Your Race was updated.');
 		$this->redirect('list');
@@ -85,7 +85,7 @@ class Tx_Mtbraceresult_Controller_RaceController extends Tx_Extbase_MVC_Controll
 	 * @dontvalidate $newRace
 	 * @return void
 	 */
-	public function newAction(Tx_Mtbraceresult_Domain_Model_Race $newRace = NULL) {
+	public function newAction(\Hyneck\Mtbraceresult\Domain\Model\Race $newRace = NULL) {
 		$this->view->assign('newRace', $newRace);
 	}
 
@@ -95,7 +95,7 @@ class Tx_Mtbraceresult_Controller_RaceController extends Tx_Extbase_MVC_Controll
 	 * @param $newRace
 	 * @return void
 	 */
-	public function createAction(Tx_Mtbraceresult_Domain_Model_Race $newRace) {
+	public function createAction(\Hyneck\Mtbraceresult\Domain\Model\Race $newRace) {
 		$this->raceRepository->add($newRace);
 		$this->flashMessageContainer->add('Your new Race was created.');
 		$this->redirect('list');
@@ -107,7 +107,7 @@ class Tx_Mtbraceresult_Controller_RaceController extends Tx_Extbase_MVC_Controll
 	 * @param $race
 	 * @return void
 	 */
-	public function showAction(Tx_Mtbraceresult_Domain_Model_Race $race) {
+	public function showAction(\Hyneck\Mtbraceresult\Domain\Model\Race $race) {
 		$this->view->assign('race', $race);
 	}
 

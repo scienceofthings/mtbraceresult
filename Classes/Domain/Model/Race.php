@@ -1,5 +1,5 @@
 <?php
-
+namespace Hyneck\Mtbraceresult\Domain\Model;
 /***************************************************************
  *  Copyright notice
  *
@@ -32,7 +32,7 @@
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  *
  */
-class Tx_Mtbraceresult_Domain_Model_Race extends Tx_Extbase_DomainObject_AbstractValueObject {
+class Race extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * location
@@ -53,7 +53,7 @@ class Tx_Mtbraceresult_Domain_Model_Race extends Tx_Extbase_DomainObject_Abstrac
 	/**
 	 * a race belongs to excactly one race series
 	 *
-	 * @var Tx_Mtbraceresult_Domain_Model_RaceSeries
+	 * @var \Hyneck\Mtbraceresult\Domain\Model\RaceSeries
 	 */
 	protected $name;
 
@@ -98,7 +98,7 @@ class Tx_Mtbraceresult_Domain_Model_Race extends Tx_Extbase_DomainObject_Abstrac
 	/**
 	 * Returns the name
 	 *
-	 * @return Tx_Mtbraceresult_Domain_Model_RaceSeries $name
+	 * @return \Hyneck\Mtbraceresult\Domain\Model\RaceSeries $name
 	 */
 	public function getName() {
 		return $this->name;
@@ -138,10 +138,10 @@ class Tx_Mtbraceresult_Domain_Model_Race extends Tx_Extbase_DomainObject_Abstrac
 	/**
 	 * Sets the name
 	 *
-	 * @param Tx_Mtbraceresult_Domain_Model_RaceSeries $name
+	 * @param \Hyneck\Mtbraceresult\Domain\Model\Racesercies $name
 	 * @return void
 	 */
-	public function setName(Tx_Mtbraceresult_Domain_Model_RaceSeries $name) {
+	public function setName(\Hyneck\Mtbraceresult\Domain\Model\Racesercies $name) {
 		$this->name = $name;
 	}
 

@@ -1,5 +1,5 @@
 <?php
-
+namespace Hyneck\Mtbraceresult\Domain\Model;
 /***************************************************************
  *  Copyright notice
  *
@@ -32,7 +32,7 @@
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  *
  */
-class Tx_Mtbraceresult_Domain_Model_RaceResult extends Tx_Extbase_DomainObject_AbstractEntity {
+class RaceResult extends\TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * result
@@ -45,14 +45,14 @@ class Tx_Mtbraceresult_Domain_Model_RaceResult extends Tx_Extbase_DomainObject_A
 	/**
 	 * race
 	 *
-	 * @var Tx_Mtbraceresult_Domain_Model_Race
+	 * @var \Hyneck\Mtbraceresult\Domain\Model\Race
 	 */
 	protected $race;
 
 	/**
 	 * racer
 	 *
-	 * @var Tx_Mtbraceresult_Domain_Model_Racer
+	 * @var \Hyneck\Mtbraceresult\Domain\Model\Racer
 	 */
 	protected $racer;
 
@@ -78,7 +78,7 @@ class Tx_Mtbraceresult_Domain_Model_RaceResult extends Tx_Extbase_DomainObject_A
 	/**
 	 * Returns the race
 	 *
-	 * @return Tx_Mtbraceresult_Domain_Model_Race $race
+	 * @return \Hyneck\Mtbraceresult\Domain\Model\Race $race
 	 */
 	public function getRace() {
 		return $this->race;
@@ -88,17 +88,17 @@ class Tx_Mtbraceresult_Domain_Model_RaceResult extends Tx_Extbase_DomainObject_A
 	/**
 	 * Sets the race
 	 *
-	 * @param Tx_Mtbraceresult_Domain_Model_Race $race
+	 * @param \Hyneck\Mtbraceresult\Domain\Model\Race $race
 	 * @return void
 	 */
-	public function setRace(Tx_Mtbraceresult_Domain_Model_Race $race) {
+	public function setRace(\Hyneck\Mtbraceresult\Domain\Model\Race $race) {
 		$this->race = $race;
 	}
 
 	/**
 	 * Returns the racer
 	 *
-	 * @return Tx_Mtbraceresult_Domain_Model_Racer $racer
+	 * @return \Hyneck\Mtbraceresult\Domain\Model\Racer $racer
 	 */
 	public function getRacer() {
 		return $this->racer;
@@ -107,10 +107,10 @@ class Tx_Mtbraceresult_Domain_Model_RaceResult extends Tx_Extbase_DomainObject_A
 	/**
 	 * Sets the racer
 	 *
-	 * @param Tx_Mtbraceresult_Domain_Model_Racer $racer
+	 * @param \Hyneck\Mtbraceresult\Domain\Model\Racer $racer
 	 * @return void
 	 */
-	public function setRacer(Tx_Mtbraceresult_Domain_Model_Racer $racer) {
+	public function setRacer(\Hyneck\Mtbraceresult\Domain\Model\Racer $racer) {
 		$this->racer = $racer;
 	}
 

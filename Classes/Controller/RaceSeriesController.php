@@ -1,5 +1,5 @@
 <?php
-
+namespace Hyneck\Raceresult\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -32,15 +32,15 @@
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  *
  */
-class Tx_Mtbraceresult_Controller_RaceSeriesController extends Tx_Extbase_MVC_Controller_ActionController {
+class RaceSeriesController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * action delete
 	 *
-	 * @param $raceSeries
+	 * @param \Hyneck\Mtbraceresult\Domain\Model\RaceSeries $raceSeries
 	 * @return void
 	 */
-	public function deleteAction(Tx_Mtbraceresult_Domain_Model_RaceSeries $raceSeries) {
+	public function deleteAction(\Hyneck\Mtbraceresult\Domain\Model\RaceSeries $raceSeries) {
 		$this->raceSeriesRepository->remove($raceSeries);
 		$this->flashMessageContainer->add('Your RaceSeries was removed.');
 		$this->redirect('list');
@@ -59,10 +59,10 @@ class Tx_Mtbraceresult_Controller_RaceSeriesController extends Tx_Extbase_MVC_Co
 	/**
 	 * action show
 	 *
-	 * @param $raceSeries
+	 * @param \Hyneck\Mtbraceresult\Domain\Model\RaceSeries $raceSeries
 	 * @return void
 	 */
-	public function showAction(Tx_Mtbraceresult_Domain_Model_RaceSeries $raceSeries) {
+	public function showAction(\Hyneck\Mtbraceresult\Domain\Model\RaceSeries $raceSeries) {
 		$this->view->assign('raceSeries', $raceSeries);
 	}
 

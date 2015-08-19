@@ -1,5 +1,5 @@
 <?php
-
+namespace Hyneck\Raceresult\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -32,22 +32,22 @@
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  *
  */
-class Tx_Mtbraceresult_Controller_RaceResultController extends Tx_Extbase_MVC_Controller_ActionController {
+class RaceResultController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * raceResultRepository
 	 *
-	 * @var Tx_Mtbraceresult_Domain_Repository_RaceResultRepository
+	 * @var \Hyneck\Mtbraceresult\Domain\Repository\RaceResultRepository
 	 */
 	protected $raceResultRepository;
 
 	/**
 	 * injectRaceResultRepository
 	 *
-	 * @param Tx_Mtbraceresult_Domain_Repository_RaceResultRepository $raceResultRepository
+	 * @param \Hyneck\Mtbraceresult\Domain\Repository\RaceResultRepository $raceResultRepository
 	 * @return void
 	 */
-	public function injectRaceResultRepository(Tx_Mtbraceresult_Domain_Repository_RaceResultRepository $raceResultRepository) {
+	public function injectRaceResultRepository(\Hyneck\Mtbraceresult\Domain\Repository\RaceResultRepository $raceResultRepository) {
 		$this->raceResultRepository = $raceResultRepository;
 	}
 
@@ -86,7 +86,7 @@ class Tx_Mtbraceresult_Controller_RaceResultController extends Tx_Extbase_MVC_Co
 	 * @param $raceResult
 	 * @return void
 	 */
-	public function showAction(Tx_Mtbraceresult_Domain_Model_RaceResult $raceResult) {
+	public function showAction(\Hyneck\Mtbraceresult\Domain\Model\RaceResult $raceResult) {
 		$this->view->assign('raceResult', $raceResult);
 	}
 

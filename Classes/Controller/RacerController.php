@@ -1,5 +1,5 @@
 <?php
-
+namespace Hyneck\Raceresult\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -32,38 +32,28 @@
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  *
  */
-class Tx_Mtbraceresult_Controller_RacerController extends Tx_Extbase_MVC_Controller_ActionController {
+class RacerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * racerRepository
 	 *
-	 * @var Tx_Mtbraceresult_Domain_Repository_RacerRepository
+	 * @var \Hyneck\Mtbraceresult\Domain\Repository\RacerRepository
+     * @inject
 	 */
 	protected $racerRepository;
 
-	/**
-	 * injectRacerRepository
-	 *
-	 * @param Tx_Mtbraceresult_Domain_Repository_RacerRepository $racerRepository
-	 * @return void
-	 */
-	public function injectRacerRepository(Tx_Mtbraceresult_Domain_Repository_RacerRepository $racerRepository) {
-		$this->racerRepository = $racerRepository;
-	}
-
-	
 	/**
 	 * action list
 	 *
 	 * @return void
 	 */
 	public function listAction() {
-		//$racers = $this->racerRepository->findAll();
+        echo "ghy";
+        exit;
+		$racers = $this->racerRepository->findAll();
+
 		                
-		$this->view->assign(
-            'uploadfolder', 
-            $GLOBALS['TCA']['tx_mtbraceresult_domain_model_racer']['columns']['portrait']['config']['uploadfolder']
-            );
+/*
         $this->view->assign('defaultPortrait', $this->settings['defaultPortrait']);
         $classToShow = $this->settings['show_class'];
         $currentYear = date('Y');
@@ -71,8 +61,8 @@ class Tx_Mtbraceresult_Controller_RacerController extends Tx_Extbase_MVC_Control
                 $classToShow, 
                 $this->settings['allocationSeasonToClass'][$currentYear]
                 );
-                
-        $racers = $this->racerRepository->findByTimestamps($timestamps);
+  */
+        //$racers = $this->racerRepository->findByTimestamps($timestamps);
         $this->view->assign('racers', $racers);
         $this->view->assign('pidDetail', $this->settings['pidDetail']);
         $this->view->assign('pidList', $this->settings['pidList']);                
@@ -83,10 +73,10 @@ class Tx_Mtbraceresult_Controller_RacerController extends Tx_Extbase_MVC_Control
 	/**
 	 * action show
 	 *
-	 * @param $racer
+	 * @param \Hyneck\Mtbraceresult\Domain\Model\Racer $racer
 	 * @return void
 	 */
-	public function showAction(Tx_Mtbraceresult_Domain_Model_Racer $racer) {
+	public function showAction(\Hyneck\Mtbraceresult\Domain\Model\Racer $racer) {
         $currentYear = date('Y');
 		$this->view->assign('racer', $racer);        
 		$this->view->assign(

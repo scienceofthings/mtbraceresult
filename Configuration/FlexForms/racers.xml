@@ -1,4 +1,3 @@
-
 <T3DataStructure>
     <sheets>
         <sDEF>
@@ -44,7 +43,7 @@
                                 </items>
                             </config>
                             <label>
-                                LLL:EXT:mtbraceresult/Resources/Private/Language/locallang.xml:tx_mtbraceresult_domain_model_race.only_show_class
+                                LLL:EXT:mtbraceresult/Resources/Private/Language/locallang.xlf:tx_mtbraceresult_domain_model_race.only_show_class
                             </label>
                         </TCEforms>                        
                     </settings.show_class>                    
