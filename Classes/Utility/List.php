@@ -3,36 +3,6 @@
 class Tx_Mtbraceresult_Utility_List{
     
     /*
-     * @return void
-     * Sets CSS and Javascript to $GLOBALS
-     */
-    public static function injectCssAndJs(){
-        //$GLOBALS['TSFE']->getPageRenderer()->addJsFooterInlineCode('effects', '$("h1").hide();');         
-        $GLOBALS['TSFE']->getPageRenderer()->addCssFile(
-                \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('mtbraceresult') . 
-                'Resources/Public/Css/smoothness/jquery-ui-1.10.1.custom.min.css'
-                ); 
-        $GLOBALS['TSFE']->getPageRenderer()->addCssFile(
-                \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('mtbraceresult') . 
-                'Resources/Public/Css/datatable.css'
-                );         
-        
-        $GLOBALS['TSFE']->getPageRenderer()->addJsFooterFile(                
-                \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('mtbraceresult') .
-                'Resources/Public/Scripts/jquery-ui-1.10.1.custom.min.js'
-                );                   
-        $GLOBALS['TSFE']->getPageRenderer()->addJsFooterFile(                
-                \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('mtbraceresult') .
-                'Resources/Public/Scripts/jquery.dataTables.min.js'
-                ); 
-        
-        $GLOBALS['TSFE']->getPageRenderer()->addJsFooterFile(                
-                \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('mtbraceresult') .
-                'Resources/Public/Scripts/sortMyTable.js'
-                );                              
-    }
-    
-    /*
      * @ param string $ageClass     
      * @ param array $settings age class setttings of the current year
      * @return array the min and max timestamp

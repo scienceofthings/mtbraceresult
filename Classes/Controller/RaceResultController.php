@@ -59,10 +59,7 @@ class Tx_Mtbraceresult_Controller_RaceResultController extends Tx_Extbase_MVC_Co
 	 *
 	 * @return void
 	 */
-	public function listAction() {    
-        // include css and javascript
-        Tx_Mtbraceresult_Utility_List::injectCssAndJs();
-        
+	public function listAction() {
         // get raceresults with valid racers
 		$allRaceResults = $this->raceResultRepository->findAll();
         foreach($allRaceResults as $raceresult){
