@@ -7,14 +7,17 @@ plugin.tx_mtbraceresult {
 	persistence {
 		storagePid = {$plugin.tx_mtbraceresult.persistence.storagePid}
 	}
-	includeCSS{
-	    file2 = EXT:mtbraceresult/Resources/Public/Css/datatable.css
+}
+
+page{
+    includeCSS{
+	    mtbraceresultDataTablesCssLibrary = EXT:mtbraceresult/Resources/Public/Css/datatable.css
 	}
 	includeJSFooterlibs{
-	    file2 = EXT:mtbraceresult/Resources/Public/Scripts/jquery.dataTables.min.js
-	    }
+	    mtbraceresultDataTablesJavaScriptLibray = EXT:mtbraceresult/Resources/Public/Scripts/jquery.dataTables.min.js
+	}
 	includeJS{
-	    file3 = EXT:mtbraceresult/Resources/Public/Scripts/sortMyTable.js
+	    mtbraceresultCustomJavaScript = EXT:mtbraceresult/Resources/Public/Scripts/sortMyTable.js
 	}
 }
 

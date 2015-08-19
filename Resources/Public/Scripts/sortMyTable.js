@@ -51,8 +51,10 @@ $(document).ready(function() {
         }
     });
 
-    $('.top').append($('.dataTables_selectRacer'));
-    $('.top').append($('.dataTables_selectRace'));
+    $('.top').prepend($('.dataTables_selectRacer'));
+    $('.top').prepend($('.dataTables_selectRace'));
+    $('.dataTables_filter').addClass('col-md-3');
+    $('.dataTables_length').addClass('col-md-3');
     $('.top').append('<div class="clearfix"></div>');
     $('.remove').detach();
 
