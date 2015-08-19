@@ -39,7 +39,7 @@ $(document).ready(function() {
         "sDom": '<"top"fl>rt<"bottom"ip><"clear">',
         "oLanguage": {
             "sLengthMenu": "Zeige <br/> _MENU_",
-            "sZeroRecords": "Nothing found - sorry",
+            "sZeroRecords": "Keine Ergebnisse gefunden.",
             "sInfo": "Zeige Ergebnisse _START_ bis _END_ von _TOTAL_",
             "sInfoEmpty": "Zeige 0 von 0 Ergebnissen",
             "oPaginate" : {
