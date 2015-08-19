@@ -8,11 +8,9 @@ plugin.tx_mtbraceresult {
 		storagePid = {$plugin.tx_mtbraceresult.persistence.storagePid}
 	}
 	includeCSS{
-	    file1 = EXT:mtbraceresult/Resources/Public/Css/smoothness/jquery-ui-1.10.1.custom.min.css
 	    file2 = EXT:mtbraceresult/Resources/Public/Css/datatable.css
 	}
 	includeJSFooterlibs{
-	    file1 = EXT:mtbraceresult/Resources/Public/Scripts/jquery-ui-1.10.1.custom.min.js
 	    file2 = EXT:mtbraceresult/Resources/Public/Scripts/jquery.dataTables.min.js
 	    }
 	includeJS{
