@@ -3,7 +3,7 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_mtbraceresult_domain_model_racer'] = array(
+$GLOBALS['TCA']['tx_mtbraceresult_domain_model_racer'] = array(
 	'ctrl' => $TCA['tx_mtbraceresult_domain_model_racer']['ctrl'],
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, birthday, portrait, description, event',
@@ -94,7 +94,7 @@ $TCA['tx_mtbraceresult_domain_model_racer'] = array(
 			),
 		),
 		'name' => array(
-			'exclude' => 0,
+			'exclude' => 1,
 			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_racer.name',
 			'config' => array(
 				'type' => 'input',
@@ -103,7 +103,7 @@ $TCA['tx_mtbraceresult_domain_model_racer'] = array(
 			),
 		),
 		'birthday' => array(
-			'exclude' => 0,
+			'exclude' => 1,
 			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_racer.birthday',
 			'config' => array(
 				'type' => 'input',
@@ -111,11 +111,11 @@ $TCA['tx_mtbraceresult_domain_model_racer'] = array(
 				'max' => 20,
 				'eval' => 'datetime,required',
 				'checkbox' => 1,
-				'default' => time()
+                'default' => '0000-00-00'
 			),
 		),
         'portrait' => array(
-			'exclude' => 0,
+			'exclude' => 1,
 			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_racer.portrait',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'portrait',
@@ -153,7 +153,7 @@ $TCA['tx_mtbraceresult_domain_model_racer'] = array(
 				'size' => 30,
 				'eval' => 'trim'
 			),
-		),                
+		),
 	),
 );
 ?>
