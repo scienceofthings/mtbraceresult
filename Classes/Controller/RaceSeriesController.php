@@ -1,5 +1,5 @@
 <?php
-namespace Hyneck\Raceresult\Controller;
+namespace Hyneck\Mtbraceresult\Controller;
 /***************************************************************
  *  Copyright notice
  *

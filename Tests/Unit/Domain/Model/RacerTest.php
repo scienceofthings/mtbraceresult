@@ -1,5 +1,5 @@
 <?php
-
+namespace Hyneck\Mtbraceresult\Tests\Unit\Domain\Model;
 /***************************************************************
  *  Copyright notice
  *
@@ -36,7 +36,7 @@
  *
  * @author Gregor Hyneck <gregor@hyneck.de>
  */
-class Tx_Mtbraceresult_Domain_Model_RacerTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class RacerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	/**
 	 * @var Tx_Mtbraceresult_Domain_Model_Racer
 	 */
