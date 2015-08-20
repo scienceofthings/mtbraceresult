@@ -3,8 +3,8 @@ if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-Tx_Extbase_Utility_Extension::configurePlugin(
-	$_EXTKEY,
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'Hyneck.' . $_EXTKEY,
 	'Raceresults',
 	array(
 		'RaceResult' => 'list',		
@@ -14,8 +14,8 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	)
 );
 
-Tx_Extbase_Utility_Extension::configurePlugin(
-	$_EXTKEY,
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'Hyneck.' . $_EXTKEY,
 	'Racers',
 	array(
 		'Racer' => 'list, show',		
