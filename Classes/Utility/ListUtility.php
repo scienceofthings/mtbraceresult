@@ -1,6 +1,7 @@
 <?php
+namespace Hyneck\Mtbraceresult\Utility;
 
-class Tx_Mtbraceresult_Utility_List{
+class ListUtility{
     
     /*
      * @ param string $ageClass     

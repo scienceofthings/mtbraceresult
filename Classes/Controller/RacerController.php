@@ -48,21 +48,15 @@ class RacerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	 * @return void
 	 */
 	public function listAction() {
-        echo "ghy";
-        exit;
-		$racers = $this->racerRepository->findAll();
 
-		                
-/*
         $this->view->assign('defaultPortrait', $this->settings['defaultPortrait']);
         $classToShow = $this->settings['show_class'];
         $currentYear = date('Y');
-        $timestamps = Tx_Mtbraceresult_Utility_List::getMinAndMaxTimeStampByAgeclass(
+        $timestamps = \Hyneck\Mtbraceresult\Utility\ListUtility::getMinAndMaxTimeStampByAgeclass(
                 $classToShow, 
                 $this->settings['allocationSeasonToClass'][$currentYear]
                 );
-  */
-        //$racers = $this->racerRepository->findByTimestamps($timestamps);
+        $racers = $this->racerRepository->findByTimestamps($timestamps);
         $this->view->assign('racers', $racers);
         $this->view->assign('pidDetail', $this->settings['pidDetail']);
         $this->view->assign('pidList', $this->settings['pidList']);                
