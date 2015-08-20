@@ -48,8 +48,6 @@ class RacerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	 * @return void
 	 */
 	public function listAction() {
-
-        $this->view->assign('defaultPortrait', $this->settings['defaultPortrait']);
         $classToShow = $this->settings['show_class'];
         $currentYear = date('Y');
         $timestamps = \Hyneck\Mtbraceresult\Utility\ListUtility::getMinAndMaxTimeStampByAgeclass(
@@ -72,16 +70,12 @@ class RacerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	 */
 	public function showAction(\Hyneck\Mtbraceresult\Domain\Model\Racer $racer) {
         $currentYear = date('Y');
-		$this->view->assign('racer', $racer);        
-		$this->view->assign(
-            'uploadfolder', 
-            $GLOBALS['TCA']['tx_mtbraceresult_domain_model_racer']['columns']['portrait']['config']['uploadfolder']
-            );
+		$this->view->assign('racer', $racer);
         $this->view->assign('pidDetail', $this->settings['pidDetail']);
         $this->view->assign('pidList', $this->settings['pidList']);
         $this->view->assign(
-                'ageClass', 
-                Tx_Mtbraceresult_Utility_List::getAgeClassByDateOfBirth(
+                'ageClass',
+            \Hyneck\Mtbraceresult\Utility\ListUtility::getAgeClassByDateOfBirth(
                         $racer->getBirthday(),
                         $this->settings['allocationSeasonToClass'][$currentYear]
                 )

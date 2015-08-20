@@ -15,7 +15,7 @@ class ListUtility{
                 $yearsToShow[] = intval($year);
             }
         }
-        if(is_array($yearsToShow)){
+        if(!empty($yearsToShow)){
             sort($yearsToShow);
             $minTimestamp = mktime(0,0,0,1,1,$yearsToShow[0]);
             $maxTimestamp = mktime(0,0,0,12,31,$yearsToShow[count($yearsToShow)-1]);
