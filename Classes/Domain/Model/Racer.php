@@ -60,8 +60,7 @@ class Racer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
    	/**
 	 * portrait
 	 *
-	 * @var \string
-     * @lazy
+	 * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
 	 */
 	protected $portrait;
 
@@ -153,7 +152,7 @@ class Racer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $portrait
 	 * @return void
 	 */
-	public function setPortrait($portrait) {
+	public function setPortrait(\TYPO3\CMS\Extbase\Domain\Model\FileReference $portrait) {
 		$this->portrait = $portrait;
 	}
 

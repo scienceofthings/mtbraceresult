@@ -1,5 +1,6 @@
 <?php
- 
+namespace Hyneck\Mtbraceresult\Helper;
+
 class user_LabelClass {
     
    function getUserLabel(&$params, &$pObj) {
