@@ -128,12 +128,11 @@ $TCA['tx_mtbraceresult_domain_model_racer'] = array(
 );
 
 
-
+require_once(t3lib_extMgm::extPath($_EXTKEY).'Classes/Helper/class.userLabelClass.php');
 $TCA['tx_mtbraceresult_domain_model_race']['ctrl']['label_userFunc'] =
-    "user_LabelClass->getUserLabel";
-
+    '\Hyneck\Mtbraceresult\Helper\user_LabelClass->getUserLabelRace';
 $TCA['tx_mtbraceresult_domain_model_raceresult']['ctrl']['label_userFunc'] =
-    "user_LabelClass->getUserLabelRaceresult";
+    '\Hyneck\Mtbraceresult\Helper\user_LabelClass->getUserLabelRaceResult';
 
 
 // plugin for Race Results
