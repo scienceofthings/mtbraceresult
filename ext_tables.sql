@@ -2,13 +2,13 @@
 # Table structure for table 'tx_mtbraceresult_domain_model_race'
 #
 CREATE TABLE tx_mtbraceresult_domain_model_race (
+
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
-
 	location varchar(255) DEFAULT '' NOT NULL,
-	date int(11) DEFAULT '0' NOT NULL,
-	name int(11) unsigned DEFAULT '0',
+	date date DEFAULT '0000-00-00',
+	name varchar(255) DEFAULT '' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -35,7 +35,8 @@ CREATE TABLE tx_mtbraceresult_domain_model_race (
 	PRIMARY KEY (uid),
 	KEY parent (pid),
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
-	KEY language (l10n_parent,sys_language_uid)
+ KEY language (l10n_parent,sys_language_uid)
+
 );
 
 #
@@ -87,8 +88,8 @@ CREATE TABLE tx_mtbraceresult_domain_model_racer (
 
 
 	name varchar(255) DEFAULT '' NOT NULL,
-	birthday int(11) DEFAULT '0' NOT NULL,
-	portrait int(11) unsigned DEFAULT '0' NOT NULL,
+	birthday date DEFAULT '0000-00-00',
+	portrait int(11) unsigned DEFAULT '0' NOT NULL default '0',
 	description text NOT NULL,
 	event varchar(255) DEFAULT '' NOT NULL,
 
@@ -117,5 +118,6 @@ CREATE TABLE tx_mtbraceresult_domain_model_racer (
 	PRIMARY KEY (uid),
 	KEY parent (pid),
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
-	KEY language (l10n_parent,sys_language_uid)
+ KEY language (l10n_parent,sys_language_uid)
+
 );
