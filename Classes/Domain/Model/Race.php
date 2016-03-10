@@ -53,7 +53,7 @@ class Race extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * a race belongs to excactly one race series
 	 *
-	 * @var \Hyneck\Mtbraceresult\Domain\Model\RaceSeries
+	 * @var string
 	 */
 	protected $name;
 
@@ -98,7 +98,7 @@ class Race extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the name
 	 *
-	 * @return \Hyneck\Mtbraceresult\Domain\Model\RaceSeries $name
+	 * @return string
 	 */
 	public function getName() {
 		return $this->name;
@@ -138,10 +138,10 @@ class Race extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the name
 	 *
-	 * @param \Hyneck\Mtbraceresult\Domain\Model\Racesercies $name
+	 * @param string $name
 	 * @return void
 	 */
-	public function setName(\Hyneck\Mtbraceresult\Domain\Model\Racesercies $name) {
+	public function setName($name) {
 		$this->name = $name;
 	}
 

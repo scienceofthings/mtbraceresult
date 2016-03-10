@@ -4,45 +4,20 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	$_EXTKEY,
+	'Hyneck.' . $_EXTKEY,
 	'Raceresults',
 	'Race Results'
 );
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	$_EXTKEY,
+	'Hyneck.' . $_EXTKEY,
 	'Racers',
 	'Racers'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'MTB Race Result');
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_mtbraceresult_domain_model_raceseries', 'EXT:mtbraceresult/Resources/Private/Language/locallang_csh_tx_mtbraceresult_domain_model_raceseries.xlf');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_mtbraceresult_domain_model_raceseries');
-$TCA['tx_mtbraceresult_domain_model_raceseries'] = array(
-	'ctrl' => array(
-		'title'	=> 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_raceseries',
-		'label' => 'name',
-		'tstamp' => 'tstamp',
-		'crdate' => 'crdate',
-		'cruser_id' => 'cruser_id',
-		'dividers2tabs' => TRUE,
-		'versioningWS' => 2,
-		'versioning_followPages' => TRUE,
-		'origUid' => 't3_origuid',
-		'languageField' => 'sys_language_uid',
-		'transOrigPointerField' => 'l10n_parent',
-		'transOrigDiffSourceField' => 'l10n_diffsource',
-		'delete' => 'deleted',
-		'enablecolumns' => array(
-			'disabled' => 'hidden',
-			'starttime' => 'starttime',
-			'endtime' => 'endtime',
-		),
-		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/RaceSeries.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_mtbraceresult_domain_model_raceseries.gif'
-	),
-);
+
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_mtbraceresult_domain_model_race', 'EXT:mtbraceresult/Resources/Private/Language/locallang_csh_tx_mtbraceresult_domain_model_race.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_mtbraceresult_domain_model_race');
@@ -67,7 +42,7 @@ $TCA['tx_mtbraceresult_domain_model_race'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Race.php',
+		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/tx_mtbraceresult_domain_model_race.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_mtbraceresult_domain_model_race.gif'
 	),
 );
@@ -94,7 +69,7 @@ $TCA['tx_mtbraceresult_domain_model_raceresult'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/RaceResult.php',
+		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/tx_mtbraceresult_domain_model_raceresult.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_mtbraceresult_domain_model_raceresult.gif'
 	),
 );
@@ -122,13 +97,13 @@ $TCA['tx_mtbraceresult_domain_model_racer'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Racer.php',
+		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/tx_mtbraceresult_domain_model_racer.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_mtbraceresult_domain_model_racer.gif'
 	),
 );
 
 
-require_once(t3lib_extMgm::extPath($_EXTKEY).'Classes/Helper/class.userLabelClass.php');
+require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).'Classes/Helper/class.userLabelClass.php');
 $TCA['tx_mtbraceresult_domain_model_race']['ctrl']['label_userFunc'] =
     '\Hyneck\Mtbraceresult\Helper\user_LabelClass->getUserLabelRace';
 $TCA['tx_mtbraceresult_domain_model_raceresult']['ctrl']['label_userFunc'] =

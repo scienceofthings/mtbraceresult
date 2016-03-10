@@ -77,29 +77,8 @@ class RaceTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 	 * @test
 	 */
 	public function setDateForDateTimeSetsDate() { }
-	
-	/**
-	 * @test
-	 */
-	public function getNameReturnsInitialValueForTx_Mtbraceresult_Domain_Model_RaceSeries() { 
-		$this->assertEquals(
-			NULL,
-			$this->fixture->getName()
-		);
-	}
 
-	/**
-	 * @test
-	 */
-	public function setNameForTx_Mtbraceresult_Domain_Model_RaceSeriesSetsName() { 
-		$dummyObject = new Tx_Mtbraceresult_Domain_Model_RaceSeries();
-		$this->fixture->setName($dummyObject);
 
-		$this->assertSame(
-			$dummyObject,
-			$this->fixture->getName()
-		);
-	}
 	
 }
 ?>
