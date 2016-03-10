@@ -129,12 +129,12 @@ return array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_racer.birthday',
 			'config' => array(
+				'dbType' => 'date',
 				'type' => 'input',
-				'size' => 12,
-				'max' => 20,
-				'eval' => 'datetime,required',
-				'checkbox' => 1,
-                'default' => '0000-00-00'
+				'size' => 7,
+				'eval' => 'date',
+				'checkbox' => 0,
+				'default' => '0000-00-00'
 			),
 		),
 		'portrait' => array(
@@ -184,7 +184,7 @@ return array(
 			),
 		),
 		'description' => array(
-			'exclude' => 0,
+			'exclude' => 1,
 			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_racer.description',
 			'config' => array(
 				'type' => 'text',
@@ -196,4 +196,3 @@ return array(
 
 	),
 );
-?>
