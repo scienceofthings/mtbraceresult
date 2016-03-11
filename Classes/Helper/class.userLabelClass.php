@@ -16,8 +16,8 @@ class user_LabelClass {
         $race = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecord('tx_mtbraceresult_domain_model_race', $raceresult['race']);
         if(isset($racer) && isset($race)){
             $params['title'] = sprintf("%s / %s / %s",
-                $racer['name'],
                 $race['date'],
+                $racer['name'],
                 $race['location']
             );
         }
