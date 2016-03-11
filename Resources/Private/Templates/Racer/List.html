@@ -1,0 +1,31 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<ul class="racers list row" >
+	<f:for each="{racers}" as="racer">
+		<li class="col-sm-2">
+                <f:if condition="{racer.portrait.uid}">
+                    <f:then>
+                            <f:cObject typoscriptObjectPath="plugin.tx_mtbraceresult.racer.list.image">
+                                {f:uri.image(src:racer.portrait.uid,treatIdAsReference:1)}
+                            </f:cObject>
+                    </f:then>
+                    <f:else>
+                        <f:cObject typoscriptObjectPath="plugin.tx_mtbraceresult.racer.list.image">
+                            {f:uri.image(src:371,treatIdAsReference:1)}
+                        </f:cObject>
+                    </f:else>
+                </f:if>                                
+                <p>
+                    {racer.name} <br/>
+                    {racer.event}
+                </p> 
+                
+		</li>
+	</f:for>
+    <div class="clearfix"></div>
+</ul>
+
+
+</f:section>
