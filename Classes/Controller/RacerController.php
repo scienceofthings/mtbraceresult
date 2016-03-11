@@ -50,7 +50,7 @@ class RacerController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	public function listAction() {
         $classToShow = $this->settings['show_class'];
         $currentYear = date('Y');
-        $timestamps = \Hyneck\Mtbraceresult\Utility\ListUtility::getMinAndMaxTimeStampByAgeclass(
+        $timestamps = \Hyneck\Mtbraceresult\Utility\ListUtility::getBeginAndEndDateForThisAgeclass(
                 $classToShow, 
                 $this->settings['allocationSeasonToClass'][$currentYear]
                 );

@@ -40,14 +40,15 @@ class RacerRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
      * @param array $timestamps Maximum DateOfBirth     
      * @return Tx_Extbase_Persistence_QueryResultInterface
      */
-    public function findByTimestamps($timestamps) {                
-        $minTimestamp = $timestamps[0];
-        $maxTimestamp = $timestamps[1];                          
+    public function findByTimestamps($beginAndEndDate) {
+        $beginDate = $beginAndEndDate[0];
+        $endDate = $beginAndEndDate[1];
+
         $query = $this->createQuery();        
         $query->matching(
             $query->logicalAnd(
-                $query->greaterThanOrEqual('birthday',$minTimestamp),
-                $query->lessThanOrEqual('birthday',$maxTimestamp)              
+                $query->greaterThanOrEqual('birthday',$beginDate),
+                $query->lessThanOrEqual('birthday',$endDate)
             )
         );
         
