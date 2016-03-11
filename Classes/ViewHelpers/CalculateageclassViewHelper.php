@@ -1,6 +1,7 @@
 <?php
+namespace Hyneck\Mtbraceresult\ViewHelpers;
 
-class Tx_Mtbraceresult_ViewHelpers_CalculateageclassViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper {
+class CalculateageclassViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
  
     /**
      * Reverses the string

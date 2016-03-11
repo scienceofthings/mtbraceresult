@@ -1,12 +1,13 @@
 <?php
+namespace Hyneck\Mtbraceresult\ViewHelpers;
 
-class Tx_Mtbraceresult_ViewHelpers_ListracersViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper {
+class ListracersViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
  
     /**
      * Reverses the string
      *     
-     * @param array of Tx_Mtbraceresult_Domain_Model_RaceResult
-     * @return
+     * @param array of Hyneck\Mtbraceresult\Domain\Model\RaceResult
+     * @return array of Hyneck\Mtbraceresult\Domain\Model\Racer
      */
     public function render($raceresults) {                
         $racers = array();

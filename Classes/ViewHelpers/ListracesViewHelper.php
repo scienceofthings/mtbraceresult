@@ -1,6 +1,7 @@
 <?php
+namespace Hyneck\Mtbraceresult\ViewHelpers;
 
-class Tx_Mtbraceresult_ViewHelpers_ListracesViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper {
+class ListracesViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
  
     /**
      * Reverses the string
@@ -11,7 +12,7 @@ class Tx_Mtbraceresult_ViewHelpers_ListracesViewHelper extends Tx_Fluid_Core_Vie
     public function render($raceresults) {                
         $races = array();
         foreach($raceresults as $raceresult){
-            $races[] = $raceresult->getRace()->getName()->getName() . ' ' . $raceresult->getRace()->getLocation();
+            $races[] = $raceresult->getRace()->getName() . ' ' . $raceresult->getRace()->getLocation();
                 
         }
         $races = array_unique($races);
