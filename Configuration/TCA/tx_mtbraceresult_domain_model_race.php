@@ -42,8 +42,8 @@ return array(
 				'foreign_table' => 'sys_language',
 				'foreign_table_where' => 'ORDER BY sys_language.title',
 				'items' => array(
-                    array('LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages', -1),
-                    array('LLL:EXT:lang/locallang_general.xlf:LGL.default_value', 0)
+					array('LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages', -1),
+					array('LLL:EXT:lang/locallang_general.xlf:LGL.default_value', 0)
 				),
 			),
 		),
@@ -129,12 +129,12 @@ return array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_race.date',
 			'config' => array(
+				'dbType' => 'date',
 				'type' => 'input',
-				'size' => 12,
-				'max' => 20,
-				'eval' => 'datetime,required',
-				'checkbox' => 1,
-				'default' => time()
+				'size' => 7,
+				'eval' => 'date, required',
+				'checkbox' => 0,
+				'default' => '0000-00-00'
 			),
 		),
 		'name' => array(
@@ -146,6 +146,6 @@ return array(
 				'eval' => 'trim'
 			),
 		),
+
 	),
 );
-?>
