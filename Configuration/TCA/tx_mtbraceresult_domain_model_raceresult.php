@@ -215,34 +215,21 @@ return array(
 			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_raceresult.race',
 			'config' => array(
 				'type' => 'select',
-				'foreign_table' => 'tx_mtbraceresult_domain_model_race',        
-        'foreign_table_where' => 'ORDER BY tx_mtbraceresult_domain_model_race.date DESC',        
+				'foreign_table' => 'tx_mtbraceresult_domain_model_race',
+        		'foreign_table_where' => 'ORDER BY tx_mtbraceresult_domain_model_race.date DESC',
 				'minitems' => 0,
 				'maxitems' => 1,
-				'appearance' => array(
-					'collapseAll' => 0,
-					'levelLinksPosition' => 'top',
-					'showSynchronizationLink' => 1,
-					'showPossibleLocalizationRecords' => 1,
-					'showAllLocalizationLink' => 1
-				),
 			),
 		),
 		'racer' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:mtbraceresult/Resources/Private/Language/locallang_db.xlf:tx_mtbraceresult_domain_model_raceresult.racer',
 			'config' => array(
-				'type' => 'inline',
+				'type' => 'select',
 				'foreign_table' => 'tx_mtbraceresult_domain_model_racer',
+				'foreign_table_where' => 'ORDER BY tx_mtbraceresult_domain_model_racer.name ASC',
 				'minitems' => 0,
 				'maxitems' => 1,
-				'appearance' => array(
-					'collapseAll' => 0,
-					'levelLinksPosition' => 'top',
-					'showSynchronizationLink' => 1,
-					'showPossibleLocalizationRecords' => 1,
-					'showAllLocalizationLink' => 1
-				),
 			),
 		),
 
