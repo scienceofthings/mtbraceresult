@@ -4,77 +4,87 @@
 
 <f:section name="main">
 
+    <f:if condition="{raceResults -> f:count()}>0">
+        <f:then>
+            <div class="remove">
+                <div class="dataTables_selectRacer col-md-3">
+                    <f:translate key="tx_mtbraceresult_domain_model_racer.name"/>
+                    :
+                    <br/>
+                    <select>
+                        <option selected value="">
+                            <f:translate key="tx_mtbraceresult_domain_model_racer.show_all"/>
+                        </option>
+                        <f:for each="{m:listracers(raceresults:'{raceResults}')}" as="racer">
+                            <option>{racer}</option>
+                        </f:for>
+                    </select>
+                </div>
+                <div class="dataTables_selectRace col-md-3">
+                    <f:translate key="tx_mtbraceresult_domain_model_race.name"/>
+                    :
+                    <br/>
+                    <select>
+                        <option selected value="">
+                            <f:translate key="tx_mtbraceresult_domain_model_race.show_all"/>
+                        </option>
+                        <f:for each="{m:listraces(raceresults:'{raceResults}')}" as="race">
+                            <option>{race}</option>
+                        </f:for>
+                    </select>
+                </div>
+            </div>
 
-    <div class="remove">
-        <div class="dataTables_selectRacer col-md-3">
-            <f:translate key="tx_mtbraceresult_domain_model_racer.name"/>
-            :
-            <br/>
-            <select>
-                <option selected value="">
-                    <f:translate key="tx_mtbraceresult_domain_model_racer.show_all"/>
-                </option>
-                <f:for each="{m:listracers(raceresults:'{raceResults}')}" as="racer">
-                    <option>{racer}</option>
-                </f:for>
-            </select>
-        </div>
-        <div class="dataTables_selectRace col-md-3">
-            <f:translate key="tx_mtbraceresult_domain_model_race.name"/>
-            :
-            <br/>
-            <select>
-                <option selected value="">
-                    <f:translate key="tx_mtbraceresult_domain_model_race.show_all"/>
-                </option>
-                <f:for each="{m:listraces(raceresults:'{raceResults}')}" as="race">
-                    <option>{race}</option>
-                </f:for>
-            </select>
-        </div>
-    </div>
 
-
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>
-                <f:translate key="tx_mtbraceresult_domain_model_racer.name"/>
-            </th>
-            <th>
-                <f:translate key="tx_mtbraceresult_domain_model_racer.ageclass"/>
-            </th>
-            <th>
-                <f:translate key="tx_mtbraceresult_domain_model_race.name"/>
-            </th>
-            <th>
-                <f:translate key="tx_mtbraceresult_domain_model_race.date"/>
-            </th>
-            <th>
-                <f:translate key="tx_mtbraceresult_domain_model_raceresult.result"/>
-            </th>
-        </tr>
-        </thead>
-        <tbody>
-        <f:for each="{raceResults}" as="raceResult">
-            <f:cycle values="{0: 'even', 1: 'odd'}" as="oddEven">
-                <tr class="{oddEven}">
-                    <td>
-                        {raceResult.racer.name}
-                    </td>
-                    <td>
-                        <m:calculateageclass raceResult="{raceResult}"/>
-                    </td>
-                    <td>{raceResult.race.name} {raceResult.race.location}</td>
-                    <td>
-                        <f:format.date format="d.m.Y">{raceResult.race.date}</f:format.date>
-                    </td>
-                    <td>{raceResult.result}.Platz</td>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>
+                        <f:translate key="tx_mtbraceresult_domain_model_racer.name"/>
+                    </th>
+                    <th>
+                        <f:translate key="tx_mtbraceresult_domain_model_racer.ageclass"/>
+                    </th>
+                    <th>
+                        <f:translate key="tx_mtbraceresult_domain_model_race.name"/>
+                    </th>
+                    <th>
+                        <f:translate key="tx_mtbraceresult_domain_model_race.date"/>
+                    </th>
+                    <th>
+                        <f:translate key="tx_mtbraceresult_domain_model_raceresult.result"/>
+                    </th>
                 </tr>
-            </f:cycle>
-        </f:for>
-        </tbody>
-    </table>
-
+                </thead>
+                <tbody>
+                <f:for each="{raceResults}" as="raceResult">
+                    <f:cycle values="{0: 'even', 1: 'odd'}" as="oddEven">
+                        <tr class="{oddEven}">
+                            <td>
+                                {raceResult.racer.name}
+                            </td>
+                            <td>
+                                <m:calculateageclass raceResult="{raceResult}"/>
+                            </td>
+                            <td>{raceResult.race.name} {raceResult.race.location}</td>
+                            <td>
+                                <f:format.date format="d.m.Y">{raceResult.race.date}</f:format.date>
+                            </td>
+                            <td>{raceResult.result}.Platz</td>
+                        </tr>
+                    </f:cycle>
+                </f:for>
+                <f:alias map="{elements: {0: value1, 1: value2}}">
+                    <f:if condition="{elements -> f:count()}==2">
+                        <p>Comparing with ViewHelpers: the array contains 2 elements.</p>
+                    </f:if>
+                </f:alias>
+                </tbody>
+            </table>
+        </f:then>
+        <f:else>
+            Keine Rennergebnisse bisher
+        </f:else>
+    </f:if>
 
 </f:section>
